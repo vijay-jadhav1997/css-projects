@@ -1,0 +1,98 @@
+* {
+  margin: 0;
+  padding: 0;
+  border: none;
+  outline: none;
+  box-sizing: border-box;
+}
+
+body {
+  width: 100vw;
+  min-height: 100dvh;
+  background-color: #041d3e;
+  display: flex;
+}
+
+.disc {
+  position: relative;
+  background-color: #000;
+  margin: auto;
+  height: 20rem;
+  width: 20rem;
+  border-radius: 50%;
+  overflow: hidden;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+
+.disc::before {
+  content: '';
+  position: absolute;
+  background: linear-gradient(#a402a4, #2323dc) ;
+  height: 100%;
+  width: 70%;
+  animation: rotate 3s infinite linear;
+}
+
+.disc::after {
+  content: 'HTML + CSS';
+  position: absolute;
+  height: 100%;
+  width: 100%;
+  border-radius: 50%;
+  inset: 3px;
+  /* top: 5px; */
+  /* right: 5px; */
+  /* bottom: 5px; */
+  /* left: 5px; */
+  background-color: inherit;
+  color: #fff;
+  font-size: 2rem;
+  font-weight: 700;
+  text-shadow: -2px -2px 3px rgb(255, 95, 170);
+  display: grid;
+  justify-items: center;
+  align-items: center;
+}
+
+@keyframes rotate {
+  from {
+    transform: rotate(0deg);
+    background: linear-gradient(#02a41a, #ff0000) ;
+  }
+  to {
+    transform: rotate(360deg);
+    background: linear-gradient(#2bfde5, #e32c9a) ;
+  }
+}
+
+
+.circle {
+  margin: auto;
+  border-radius: 50%;
+  background-color: inherit;
+  height: 20rem;
+  width: 20rem;
+  border: 5px solid #041d3e;
+  border-top-color:#fff;
+  border-bottom-color: #fff;
+  animation: spin 3s infinite linear;
+}
+.circle:hover {
+  animation: spin 3s infinite linear;
+}
+
+@keyframes spin {
+  0% {
+    transform: rotate(0);
+    border-top-color:#fcf404;
+    border-bottom-color: #f75fdd;
+  }
+  to {
+    transform: rotate(360deg);
+    border-top-color:#f7007f;
+    border-bottom-color: #00b129;
+  }
+}

@@ -85,7 +85,7 @@ body {
   height: 20rem;
   border-radius: 50%;
   background-color: inherit;
-  border: 5px solid #041d3e;
+  border: 5px solid transparent;
   border-left: none;
   border-right: none;
   border-top-color: #fff;

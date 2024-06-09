@@ -1,0 +1,133 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  outline: none;
+  border: none;
+}
+
+body {
+  display: flex;
+  width: 100vw;
+  min-height: 100dvh;
+  background-color: #041d3e;
+}
+
+.disc {
+  margin: auto;
+  position: relative;
+  width: 20rem;
+  height: 20rem;
+  border-radius: 50%;
+  /* border-radius: 5rem; */
+  background-color: #000;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  overflow: hidden;
+}
+
+.disc::before {
+  content: "";
+  position: absolute;
+  width: 70%;
+  height: 140%;
+  background: linear-gradient(#a402a4, #2323dc);
+  animation: rotate 5s infinite linear;
+}
+
+@keyframes rotate{
+  0% {
+    transform: rotate(0deg);
+    background: linear-gradient(#e6f60c, #ff289b);
+  }
+  35% {
+    transform: rotate(120deg);
+    background: linear-gradient(#10c1c1, #fb02ff);
+  }
+  70% {
+    transform: rotate(240deg);
+    background: linear-gradient(#0cf537, #f71313);
+  }
+  100% {
+    transform: rotate(360deg);
+    background: linear-gradient(#a40243, #399cff);
+  }
+}
+
+.disc::after {
+  position: absolute;
+  content: "HTML + CSS";
+  width: 100%;
+  height: 100%;
+  border-radius: 50%;
+  /* border-radius: 5rem; */
+  background-color: inherit;
+  inset: 3px;
+  /* top: 3px;
+  bottom: 3px;
+  left: 3px;
+  right: 3px; */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: #fff;
+  font-size: 2.5rem;
+  font-weight: 700;
+  text-shadow: -2px -2px 3px #dc1aa2;
+}
+
+
+.circle {
+  margin: auto;
+  position: relative;
+  width: 20rem;
+  height: 20rem;
+  border-radius: 50%;
+  background-color: inherit;
+  border: 5px solid #041d3e;
+  border-left: none;
+  border-right: none;
+  border-top-color: #fff;
+  border-bottom-color: #fff;
+  animation: spin 5s infinite linear;
+}
+
+
+
+@keyframes spin{
+  0% {
+    transform: rotate(0deg);
+    border-top-color: #e6f60c;
+    border-bottom-color: #ff289b;
+  }
+  35% {
+    transform: rotate(120deg);
+    border-top-color: #10c1c1;
+    border-bottom-color: #fb02ff;
+  }
+  70% {
+    transform: rotate(240deg);
+    border-top-color: #0cf537;
+    border-bottom-color: #f71313;
+  }
+  100% {
+    transform: rotate(360deg);
+    border-top-color: #a40243;
+    border-bottom-color: #399cff;
+  }
+}
+
+/*? Alternate method  */
+/* @keyframes spin {
+  0% {
+    transform: rotate(0);
+    border-top-color:#fcf404;
+    border-bottom-color: #f75fdd;
+  }
+  to {
+    transform: rotate(360deg);
+    border-top-color:#f7007f;
+    border-bottom-color: #00b129;
+  }
+} */

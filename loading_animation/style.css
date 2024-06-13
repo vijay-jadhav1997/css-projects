@@ -7,43 +7,44 @@
 }
 
 body {
-width: 100wv;
-min-height: 100vh;
-background: radial-gradient(#8f0383, #031c4b, #02025e);
-position: relative;
+  width: 100vw;
+  min-height: 100dvh;
+  background: radial-gradient(#970297, #03035c, #042769);
+  position: relative;
 }
 
 .loading {
   margin: 10rem auto 0;
-  width: 10rem;
-  height: 10rem;
+  height: 5rem;
+  width: 5rem;
+  border-radius: 50%;
   background-color: transparent;
   border: 10px solid #fff;
-  border-radius: 50%;
   border-bottom-color: transparent;
-  animation: spin 3s infinite linear;
+  border-top-color: transparent;
+  /* border-bottom-color: transparent; */
+  animation: spin 2s infinite ease-out;
 }
 
 @keyframes spin {
   0% {
     transform: rotate(0deg);
     border-color: #ff0;
-    border-bottom-color: transparent;
+    border-bottom-color: transparent ;
   }
   35% {
     transform: rotate(120deg);
-    border-color: #ff00b3;
-    border-bottom-color: transparent;
+    border-color: #ff03d9;
+    border-bottom-color: transparent ;
   }
   70% {
     transform: rotate(240deg);
-    border-color: #00e832;
-    border-bottom-color: transparent;
+    border-color: #00ff0d;
+    border-bottom-color: transparent ;
   }
   100% {
     transform: rotate(360deg);
-    border-color: #2202d9;
-    border-bottom-color: transparent;
+    border-color: #00eeff;
+    border-bottom-color: transparent ;
   }
-  
 }

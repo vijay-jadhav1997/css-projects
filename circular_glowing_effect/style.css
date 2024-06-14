@@ -1,0 +1,86 @@
+*{
+  margin: 0;
+  padding: 0;
+  border: none;
+  outline: none;
+  box-sizing: border-box;
+}
+
+body {
+  width: 100vw;
+  min-height: 100vh;
+  background-color: #0e0921;
+}
+
+.main {
+  margin-top: 2rem;
+  width: 100%;
+  height: max-content;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 5rem;
+}
+
+.rotated {
+  margin: 4rem;
+  width: 12rem;
+  height: 12rem;
+  position: relative;
+  animation: hue-effect 3s infinite linear;
+}
+
+@keyframes hue-effect {
+  from{
+    filter: hue-rotate(0deg);
+  }
+  to {
+    filter: hue-rotate(360deg);
+  }
+}
+
+.rotated span {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  transform: rotate(calc(18deg * var(--spot)));
+}
+
+.rotated span::before {
+  content: "";
+  position: absolute;
+  width: 0.5rem;
+  height: 0.5rem;
+  top: 0;
+  left: 0;
+  border-radius: 50%;
+  background-color: gold;
+  box-shadow: 0 0 25px 5px goldenrod;
+}
+
+.rotated1 span::before {
+  animation: blinks 2s infinite ease-in-out;
+  animation-delay: calc(100ms * var(--spot));
+}
+.rotated2 span::before {
+  animation: blinks 1s infinite ease-in-out;
+  animation-delay: calc(100ms * var(--spot));
+}
+.rotated3 span::before {
+  animation: blinks 1s infinite ease-in-out;
+  animation-delay: calc(150ms * var(--spot));
+}
+.rotated4 span::before {
+  animation: blinks 1s infinite ease-in-out;
+  animation-delay: calc(200ms * var(--spot));
+}
+
+@keyframes blinks {
+  from {
+    transform: scale(2.5);
+  }
+  to {
+    transform: scale(0);
+  }
+}

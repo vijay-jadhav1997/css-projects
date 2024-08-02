@@ -7,10 +7,21 @@
 }
 
 body {
-  width: 100vw;
-  min-height: 100vh;
   background-color: #0e0921;
+  width: 100%;
+  min-height: 100dvh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 3rem 0;
+  row-gap: 3rem;
 }
+
+.heading {
+  color: #fff;
+  font-size: calc(4px * 2vw);
+}
+
 
 .main {
   margin-top: 2rem;

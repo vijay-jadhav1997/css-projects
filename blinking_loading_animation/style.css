@@ -7,14 +7,23 @@
 }
 
 body {
-  width: 100vw;
+  width: 100%;
   min-height: 100dvh;
   background-color: #030a29;
   display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 5rem 0;
+}
+
+.heading {
+  color: #fff;
+  text-align: center;
+  font-size: calc(4px * 2vw);
 }
 
 .container {
-  margin: 5rem auto 0;
+  margin: 3rem auto 0;
   width: 90%;
   height: 10rem;
   display: flex;

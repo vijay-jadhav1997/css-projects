@@ -5,16 +5,25 @@
   outline: none;
   box-sizing: border-box;
 }
-
 body {
-  width: 100vw;
+  background-image: linear-gradient(120deg, #160659, #7f64ef);
+  width: 100%;
   min-height: 100dvh;
-  background: radial-gradient(#970297, #03035c, #042769);
-  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 5rem 0;
+  row-gap: 3rem;
 }
 
+.heading {
+  color: #fff;
+  font-size: calc(4px * 2vw);
+}
+
+
 .loading {
-  margin: 10rem auto 0;
+  margin: 5rem auto 0;
   height: 5rem;
   width: 5rem;
   border-radius: 50%;
@@ -23,7 +32,7 @@ body {
   border-bottom-color: transparent;
   border-top-color: transparent;
   /* border-bottom-color: transparent; */
-  animation: spin 2s infinite ease-out;
+  animation: spin 2s infinite linear;
 }
 
 @keyframes spin {

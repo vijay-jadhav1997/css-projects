@@ -1,0 +1,337 @@
+* {
+  margin: 0;
+  padding: 0;
+  outline: none;
+  border: none;
+  box-sizing: border-box;
+}
+
+body {
+  min-height: 100dvw;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 1rem 1rem 10rem;
+  background-color: #061f63;
+}
+
+.wrapper {
+  position: relative;
+  margin: 2rem 0;
+  width: 600px;
+  height: 72px;
+  width: max-content;
+}
+.heading,
+.pseudo-heading {
+  height: 72px;
+  width: 600px;
+  text-align: center;
+  font-size: 2.5rem;
+  font-weight: 950;
+  border-radius: 30px;
+  padding: 0.5rem 1rem;
+}
+
+.heading {
+  color: #670151;
+  background-color: #fff;
+}
+
+.pseudo-heading {
+  color: #fff;
+  animation: text-sliding 5s linear infinite alternate;
+}
+@keyframes text-sliding {
+  from {
+    transform: translateX(5px);
+  }
+  to {
+    transform: translateX(-500px);
+  }
+}
+
+.show {
+  position: absolute;
+  top: -2rem;
+  left: -1rem;
+  padding: 2rem 1rem;
+  background-color: #670151;
+  width: 136px;
+  /* height: 136px; */
+  z-index: 5;
+  border-radius: 50%;
+  overflow: hidden;
+  animation: sliding 5s linear infinite alternate;
+}
+
+@keyframes sliding {
+  from {
+    transform: translateX(-5px);
+  }
+  to {
+    transform: translateX(500px);
+  }
+  
+}
+
+
+
+.container {
+  margin-top: 2rem;
+  border: 3px solid rgb(214, 209, 214);
+  background-color: #f0f0f0;
+  backdrop-filter: blur(30px);
+  border-radius: 1rem;
+  width: 400px;
+  padding: 2rem 1rem;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-evenly;
+  align-items: center;
+  gap: 2rem 1rem;
+}
+
+.container button {
+  width: 130px;
+  font-size: 20px;
+  border-radius: 5px;
+  font-family: sans-serif;
+  font-weight: 700;
+  padding: 0.75rem 0;
+  background-color: transparent;
+  color: #f1f1f1;
+  position: relative;
+  cursor:  pointer;
+  transition: all 0.3s linear;
+}
+
+.container button:hover {
+  box-shadow: 0 0 10px #149a93;
+  color: #000000;
+}
+
+.container button::after,
+.container :is(.btn9, .btn15)::before {
+  content: '';
+  position: absolute;
+  border-radius: 5px;
+  background-image: linear-gradient(15deg, #31cddbbe, #d10bd1ab);
+  z-index: -1;
+  transition: all 0.3s linear;
+}
+
+.container :is(.btn1, .btn3, .btn5, .btn6, .btn9, .btn11, .btn12, .btn13, .btn14)::after,
+.container :is(.btn2, .btn4, .btn7, .btn8, .btn10):hover::after {
+  inset: 0;
+}
+
+.btn2::after,
+.btn1:hover::after {
+  inset: 0 50%;
+}
+
+.btn4::after,
+.btn3:hover::after {
+  inset: 50% 0;
+}
+
+
+
+.btn7::after,
+.btn6:hover::after {
+  inset: 0 100% 0 0;
+}
+
+.btn5:hover::after,
+.btn8::after {
+  inset: 0 0 0 100%;
+}
+
+.btn10:after,
+.btn15:after,
+.btn9:hover::after {
+  inset: 100%;
+}
+
+.btn11:hover::after {
+  inset: 100% 0 0 100%;
+}
+.btn12:hover::after {
+  inset: 0 100% 100% 0;
+}
+
+.btn13:hover::after {
+  inset: 100% 0 0;
+}
+.btn14:hover::after {
+  inset: 0 0 100%;
+}
+
+
+.container .btn15,
+.container .btn16 {
+  background-image: linear-gradient(15deg, #31cddbbe, #d10bd1ab);
+  background-clip: text;
+  color: transparent;
+  text-transform: uppercase;
+  backface-visibility: none;
+  border-radius: 10px;
+}
+
+.container .btn15::before {
+  border-radius: 10px;
+  inset: -2px;
+}
+.container .btn15::after {
+  background: white;
+  border-radius: 10px;
+  inset: 0;
+}
+
+.container .btn15:hover {
+  background-clip: inherit;
+  color: #fff;
+  box-shadow: unset;
+}
+
+.container .btn16 {
+  box-shadow: 1px 1px 4px #33b5d6, 1px 1px 3px 1px #d61bad;
+}
+.container .btn16:hover {
+  color: transparent;
+  box-shadow: inset -2px -2px 10px #d61bad, inset 0 0 15px 5px #33b5d6;
+}
+
+
+
+.container :is(.btn7, .btn8, .btn10) {
+  box-shadow: 0 0 5px #33b5d6;
+  color: #000000;
+}
+.container :is(.btn2, .btn4, .btn7, .btn8, .btn10):hover {
+  box-shadow: unset;
+  color: #fff;
+}
+
+
+
+.container .btn2 {
+  box-shadow: 0 0 1px 2px #33b5d672;
+  color: #027eab;
+}
+
+
+.container .btn3::after {
+  background-image: linear-gradient(45deg, #2cd62c, #85d10b);
+}
+.container .btn3:hover {
+  box-shadow: 1px 1px 5px #2cd62c;
+  color: #2cd62c;
+}
+
+
+.container .btn4::after {
+  background-image: linear-gradient(345deg, #be0a0a, #db311b);
+}
+.container .btn4 {
+  box-shadow: 0 0 2px 1px #c50a0a;
+  color: #c50a0a;
+}
+
+
+.container .btn5::after {
+  background-image: linear-gradient(to right bottom, #f84cab, #9b0473);
+}
+.container .btn5:hover {
+  box-shadow: 0 0 2px 1px #cb0396;
+  color: #c30891;
+}
+
+
+.container .btn6::after {
+  background-image: linear-gradient(to left bottom, #757575, #300725);
+}
+
+
+.container .btn7 {
+  box-shadow: inset -3px -3px 15px 3px #b50356;
+  color: #b50356;
+}
+.container .btn7::after {
+  background-image: conic-gradient( #b50356, #f85aa4e0, #b50356);
+}
+
+
+.container .btn8 {
+  box-shadow: inset 5px -3px 15px 3px #019201;
+  color: #019201;
+}
+.container .btn8::after {
+  background-image: linear-gradient(145deg, #a8e063, #7ecc1f, #0dc10d, #016f01);
+
+}
+
+
+.container .btn9:hover {
+  box-shadow: unset;
+  color: #2d45e3be;
+  background: #fff;
+}
+.container .btn9::before {
+  background: linear-gradient(150deg, #73aad7, #0044ff);
+  filter: blur(10px);
+  opacity: 0.9;
+  inset: -3px;
+}
+.container .btn9::after {
+  background: linear-gradient(150deg, #73aad7, #0044ff);
+  border: 1px solid #ffffff9f;
+}
+
+
+.container .btn10 {
+  box-shadow: 0 0 3px 1px red;
+  color: red;
+}
+.container .btn10::after {
+  background-image: linear-gradient(30deg, #f72b2bbe, red);
+}
+
+
+.container .btn11:hover {
+  box-shadow: inset -3px -3px 20px 5px #50be4e;
+  color: #50be4e;
+}
+.container .btn11::after {
+  background: linear-gradient(330deg, #1b8117, #a8d6a7);
+}
+
+
+.container .btn12:hover {
+  box-shadow: 0 0 3px 1px red;
+  color: red;
+}
+.container .btn12::after {
+  background-image: linear-gradient(30deg, #f72b2bbe, red);
+}
+
+
+
+.container .btn13:hover {
+  box-shadow: 0 0 3px 1px #009688;
+  color: #3bcbbd;
+}
+.container .btn13::after {
+  background: linear-gradient(120deg, #009688, #80e0a0);
+}
+
+
+.container .btn14:hover {
+  box-shadow: 0 0 3px 1px #ff5f6d;
+  color: #ff5f6d;
+}
+.container .btn14::after {
+  background: linear-gradient(60deg, #ff5f6d, #ffc371);
+}

@@ -11,3 +11,4 @@
 1. **circular border animations**
 1. **circular gloeing effects**
 1. **loading animation**
+1. **scrolling animation**

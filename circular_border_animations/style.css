@@ -8,8 +8,12 @@
 
 body {
   display: flex;
-  width: 100vw;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 5rem;
   min-height: 100dvh;
+  width: 100%;
+  padding: 3rem 2rem;
   background-color: #041d3e;
 }
 
